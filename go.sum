@@ -52,6 +52,8 @@ github.com/hashicorp/golang-lru v0.5.0 h1:CL2msUPvZTLb5O648aiLNJw3hnBxN2+1Jq8rCO
 github.com/hashicorp/golang-lru v0.5.0/go.mod h1:/m3WP610KZHVQ1SGc6re/UDhFvYD7pJ4Ao+sR/qLZy8=
 github.com/heru-wijaya/go-grpc-skeleton v0.0.0-20210308084043-26a553730c6c h1:6VsTp+/pUP3KIoielxJDbYGkebYCIhneD/aNgriB1Cg=
 github.com/heru-wijaya/go-grpc-skeleton v0.0.0-20210308084043-26a553730c6c/go.mod h1:dCel6GH024/AfnT8Z/5+5hFj3q/GgHBNV8/Ti8MI5Y0=
+github.com/heru-wijaya/go-grpc-skeleton v0.0.0-20210309084118-c1bc6ade0b41 h1:un993t0JnlYk+r0NMrgcWbcREFIDNZZFk0zXomBXeBk=
+github.com/heru-wijaya/go-grpc-skeleton v0.0.0-20210309084118-c1bc6ade0b41/go.mod h1:dCel6GH024/AfnT8Z/5+5hFj3q/GgHBNV8/Ti8MI5Y0=
 github.com/joho/godotenv v1.3.0 h1:Zjp+RcGpHhGlrMbJzXTrZZPrWj+1vfm90La1wgB6Bhc=
 github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
 github.com/kr/pretty v0.1.0 h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=

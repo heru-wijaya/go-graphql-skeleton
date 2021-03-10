@@ -24,3 +24,13 @@ this is a simple graphql skeleton using golang, gqlgen, and graphql
     name
   }
 }
+
+## how to add new schema
+1. create new folder
+2. copy schema.graphql on other folder and edit
+3. run this command
+> go run github.com/99designs/gqlgen generate
+
+or you can go to new folder and initialize
+command for initialize
+> go run github.com/99designs/gqlgen init

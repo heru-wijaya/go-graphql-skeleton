@@ -11,6 +11,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// AppConfig struct type for env variable
 type AppConfig struct {
 	AccountURL string `envconfig:"ACCOUNT_SERVICE_URL"`
 }
@@ -20,9 +21,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	accUrl := os.Getenv("ACCOUNT_SERVICE_URL")
+	accURL := os.Getenv("ACCOUNT_SERVICE_URL")
 
-	s, err := account.NewGraphQLServer(accUrl)
+	s, err := account.NewGraphQLServer(accURL)
 	if err != nil {
 		log.Fatal(err)
 	}

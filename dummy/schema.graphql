@@ -1,0 +1,14 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+scalar Time
+
+type Product {
+  id: String!
+  name: String!
+}
+
+type Query {
+  Products(id: String): [Product!]!
+}

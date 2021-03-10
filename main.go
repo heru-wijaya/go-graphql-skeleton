@@ -7,6 +7,7 @@ import (
 
 	"github.com/99designs/gqlgen/handler"
 	account "github.com/heru-wijaya/go-graphql-skeleton/account"
+	dummy "github.com/heru-wijaya/go-graphql-skeleton/dummy"
 	"github.com/joho/godotenv"
 )
 
@@ -26,8 +27,14 @@ func main() {
 		log.Fatal(err)
 	}
 
-	http.Handle("/graphql", handler.GraphQL(s.ToExecutableSchema()))
-	http.Handle("/playground", handler.Playground("account", "/graphql"))
+	d, err := dummy.NewGraphQLServer()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	http.Handle("/account", handler.GraphQL(s.ToExecutableSchema()))
+	http.Handle("/dummy", handler.GraphQL(d.ToExecutableSchema()))
+	http.Handle("/playground", handler.Playground("account", "/dummy"))
 
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }

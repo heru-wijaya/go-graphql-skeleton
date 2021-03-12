@@ -5,7 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/99designs/gqlgen/handler"
+	"github.com/99designs/gqlgen/graphql/handler"
+	"github.com/99designs/gqlgen/graphql/playground"
 	account "github.com/heru-wijaya/go-graphql-skeleton/account"
 	dummy "github.com/heru-wijaya/go-graphql-skeleton/dummy"
 	"github.com/joho/godotenv"
@@ -33,9 +34,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	http.Handle("/account", handler.GraphQL(s.ToExecutableSchema()))
-	http.Handle("/dummy", handler.GraphQL(d.ToExecutableSchema()))
-	http.Handle("/playground", handler.Playground("account", "/dummy"))
+	http.Handle("/account", handler.NewDefaultServer(s.ToExecutableSchema()))
+	http.Handle("/dummy", handler.NewDefaultServer(d.ToExecutableSchema()))
+	http.Handle("/playground", playground.Handler("account", "/dummy"))
 
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
